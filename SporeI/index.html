@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<title>SporeIdle</title>
+	<link href="css/default.css" rel="stylesheet" />
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/engine.js"></script>
+	<script src="js/cell.js"></script>
+	<script src="js/draw.js"></script>
+</head>
+<body>
+	<div id="stats">
+		<b>STATS</b>
+		<div>DNA : <label id="cellPower">0</label></div>
+		<div>Lvl : <label id="cellLvl">0</label></div>
+		<div>Food : <label id="food">None</label></div>
+		<div>Xp to next lvl : <label id="xpToLvl">5</label></div>
+		<div id="mutation" style="display: none;">Next mutation (+1XP) : <label id="secBeforeMutation">10</label></div>
+	</div>
+	<br />
+	<div id="powerUps">
+		<b>POWERUPS</b>
+		<div id="buyTime">Time : <label onclick="buyTime()">10 ADN</label></div>
+		<div id="buyFood" style="display: none;">Allow Food : <label onclick="buyFood()">20 ADN</label></div>
+		<div id="buySave" style="display: none;">Allow Save : <label onclick="buySave()">20 ADN</label></div>
+		<div id="allowEvol" style="display: none;">Allow Evolution : <label onclick="allowEvol()">30 ADN</label></div>
+	</div>
+	<br />
+	<div id="actions">
+		<b>ACTIONS</b>
+		<div id="saveButton" onclick="saveGame()" style="display: none;">Save Game</div>
+		<div id="loveCry" onclick="loveCry()" style="display: none;">Love Cry</div>
+	</div>
+	<div id="cell" onclick="cellClick()" style="text-align: center;">C</div>
+	<div id="errorDiv"><label id="errorLabel" style="color: red;"></label></div>
+</body>
+</html>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		initSpore();
+	});
+</script>
